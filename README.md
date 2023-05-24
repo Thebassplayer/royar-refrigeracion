@@ -1,1 +1,0 @@
-# royar-refrigeracion
