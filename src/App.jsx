@@ -1,9 +1,16 @@
-function App() {
+import React from "react";
+import Header from "./components/Header";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
+
+const App = () => {
   return (
-    <>
-      <h1 className="text-lg text-center">Royal Refrigeracion</h1>
-    </>
+    <div>
+      <Header />
+      <Services />
+      <Contact />
+    </div>
   );
-}
+};
 
 export default App;
