@@ -16,13 +16,19 @@ const Header = () => {
 
   return (
     <section className="flex h-screen flex-col text-white">
-      <div class="mx-auto h-1/4 max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+      <div class="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
+        <h1 className=" text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
           ❄️ Royal Refrigeracion
         </h1>
-        <h2 className="mt-8 text-lg font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48">
+      </div>
+      <div className="mx-auto w-full max-w-screen-xl bg-slate-700 px-4 py-4 text-center lg:px-12 lg:py-16">
+        <h2 className=" text-2xl font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48">
           Servicio técnico de Aires Acondicionados
         </h2>
+        <h3 className="mt-4 text-sm font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48">
+          Nuñez, Belgrano, Villa Urquiza, Saavedra, Coghlan, Colegiales, Vicente
+          Lopez, San Isidro
+        </h3>
       </div>
       <Carousel
         autoPlay
