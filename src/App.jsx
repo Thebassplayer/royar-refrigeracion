@@ -5,7 +5,7 @@ import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-slate-800">
       <Header />
       <Services />
       <Contact />

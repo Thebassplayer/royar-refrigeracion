@@ -15,18 +15,15 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex h-screen flex-col justify-between bg-blue-500 text-white">
-      <Box className="py-6" textAlign="center">
-        <Container maxWidth="lg">
-          <Typography
-            variant="h2"
-            component="h1"
-            className="font-bold text-white"
-          >
-            ❄️ Royal Refrigeracion
-          </Typography>
-        </Container>
-      </Box>
+    <section className="flex h-screen flex-col text-white">
+      <div class="mx-auto h-1/4 max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
+        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          ❄️ Royal Refrigeracion
+        </h1>
+        <h2 className="mt-8 text-lg font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48">
+          Servicio técnico de Aires Acondicionados
+        </h2>
+      </div>
       <Carousel
         autoPlay
         infiniteLoop={true}
@@ -46,8 +43,7 @@ const Header = () => {
           </div>
         ))}
       </Carousel>
-      <Box className="animate-fadeIn h-1 bg-black"></Box>
-    </header>
+    </section>
   );
 };
 
