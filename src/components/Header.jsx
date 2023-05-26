@@ -19,7 +19,7 @@ const Header = () => {
     <section className="flex h-screen flex-col text-white">
       {/* Title */}
       <div class="mx-auto max-w-screen-xl px-4 py-6 text-center lg:px-12 lg:py-16">
-        <h1 className=" text-3xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+        <h1 className=" text-3xl font-extrabold leading-none tracking-tight dark:text-white md:text-5xl lg:text-6xl">
           ❄️ Royal Refrigeracion
         </h1>
       </div>
