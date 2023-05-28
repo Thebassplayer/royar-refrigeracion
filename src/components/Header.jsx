@@ -19,16 +19,16 @@ const Header = () => {
     <section className="flex h-screen flex-col text-white">
       {/* Title */}
       <div class="mx-auto max-w-screen-xl px-4 py-6 text-center lg:px-12 lg:py-16">
-        <h1 className=" text-3xl font-extrabold leading-none tracking-tight dark:text-white md:text-5xl lg:text-6xl">
+        <h1 className="text-center text-3xl font-extrabold leading-none tracking-tight dark:text-white md:text-5xl lg:text-6xl">
           ❄️ Royal Refrigeracion
         </h1>
       </div>
       {/* Subtitle */}
-      <div className="mx-auto w-full max-w-screen-xl bg-slate-700 px-4 py-4 text-center lg:px-12 lg:py-16">
-        <h2 className=" text-2xl font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48">
+      <div className="m-4 mt-0 rounded-lg bg-gray-800 p-6 shadow-lg">
+        <h2 className="text-whitesm:px-16 text-center text-2xl font-normal lg:text-xl xl:px-48">
           Servicio técnico de Aires Acondicionados
         </h2>
-        <h3 className="mt-2 text-sm font-normal text-gray-500 dark:text-gray-400 sm:px-16 lg:text-xl xl:px-48">
+        <h3 className="text-whitesm:px-16 mt-2 text-center text-sm font-normal lg:text-xl xl:px-48">
           Nuñez, Belgrano, Villa Urquiza, Saavedra, Coghlan, Colegiales, Vicente
           Lopez, San Isidro
         </h3>
