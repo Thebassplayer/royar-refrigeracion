@@ -16,10 +16,10 @@ import image4 from "./assets/image4.png";
 const App = () => {
   //Provisorie carousel items
   const carouselItems = [
-    { id: 1, image: image1 },
-    { id: 2, image: image2 },
-    { id: 3, image: image3 },
-    { id: 4, image: image4 },
+    { id: 1, src: image1 },
+    { id: 2, src: image2 },
+    { id: 3, src: image3 },
+    { id: 4, src: image4 },
   ];
 
   return (

@@ -52,7 +52,7 @@ const Services = () => {
       {
         // Buttons container
       }
-      <div className="flex grow flex-col justify-evenly gap-4 lg:grid lg:grid-cols-4">
+      <div className="flex grow flex-col justify-evenly gap-4 md:grid md:grid-cols-2 lg:grid-cols-4">
         {servicesButtons.map(({ id, icon, color, text }) => (
           <ServicesButton key={id} icon={icon} color={color} text={text} />
         ))}
