@@ -10,7 +10,7 @@ const ServiesButton = ({ id, icon, color, text }) => {
       <div className="pr-4">
         <FontAwesomeIcon icon={icon} size="xl" style={{ color }} />
       </div>
-      <h3 className="text-white">{text}</h3>
+      <h3 className="text-gray-200">{text}</h3>
     </div>
   );
 };
