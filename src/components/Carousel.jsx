@@ -24,7 +24,7 @@ const Carousel = ({ images }) => {
   }, []);
 
   return (
-    <section className="h-2/5">
+    <section className="h-2/6 sm:h-2/5">
       <div id="carousel" className="relative h-full overflow-hidden md:h-3/4">
         <div className="flex items-center justify-between">
           <button

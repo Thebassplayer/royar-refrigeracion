@@ -2,8 +2,8 @@ import React from "react";
 import FullscreenContainer from "./components/FullscreenContainer";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
-import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
+import AboutUs from "./components/AboutUs";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
@@ -25,9 +25,9 @@ const App = () => {
       <FullscreenContainer>
         <Header />
         <Carousel images={carouselItems} />
-        <AboutUs />
+        <Services />
       </FullscreenContainer>
-      <Services />
+      <AboutUs />
       <Contact />
       <Footer />
     </div>

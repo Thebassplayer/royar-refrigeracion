@@ -6,15 +6,15 @@ const Contact = () => {
   return (
     <section className="mx-4 flex h-full flex-col items-center justify-evenly">
       <div className="m-4 w-full rounded-lg bg-gray-800 p-6 shadow-lg">
-        <h1 className="text-center text-2xl font-bold text-white">
+        <h2 className="py-4 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:text-3xl xl:px-48">
           ¿Consultas?
-        </h1>
+        </h2>
         <p className="mt-4 text-center text-gray-300">
           Realizanos tu consulta directamente por Whatsapp. Te responderemos a
           la brevedad
         </p>
       </div>
-      <div className="mb-4">
+      <div className="my-4">
         <WhatsAppButton />
       </div>
     </section>
