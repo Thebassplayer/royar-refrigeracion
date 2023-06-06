@@ -14,8 +14,9 @@ const Contact = () => {
           la brevedad
         </p>
       </div>
-
-      <WhatsAppButton />
+      <div className="mb-4">
+        <WhatsAppButton />
+      </div>
     </section>
   );
 };

@@ -1,7 +1,11 @@
 import React from "react";
+import FullscreenContainer from "./components/FullscreenContainer";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
+import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 // Provisorie carousel images
 import image1 from "./assets/image1.jpeg";
@@ -18,11 +22,14 @@ const App = () => {
 
   return (
     <div className="bg-slate-700">
-      <div className="h-screen">
+      <FullscreenContainer>
         <Header />
         <Carousel images={carouselItems} />
-      </div>
+        <AboutUs />
+      </FullscreenContainer>
       <Services />
+      <Contact />
+      <Footer />
     </div>
   );
 };
