@@ -2,8 +2,8 @@ import React from "react";
 import FullscreenContainer from "./components/FullscreenContainer";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
-import Services from "./components/Services";
 import AboutUs from "./components/AboutUs";
+import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 

@@ -24,8 +24,8 @@ const Carousel = ({ images }) => {
   }, []);
 
   return (
-    <section className="h-2/6 sm:h-2/5">
-      <div id="carousel" className="relative h-full overflow-hidden md:h-3/4">
+    <section className="h-2/6 sm:h-2/5 md:h-1/2">
+      <div id="carousel" className="relative h-full overflow-hidden ">
         <div className="flex items-center justify-between">
           <button
             className="absolute left-0 top-1/2 z-10 -translate-y-1/2 transform rounded bg-transparent px-4 py-2 text-white transition-colors duration-300 hover:text-gray-800 focus:outline-none"
