@@ -5,7 +5,7 @@ const ServiesButton = ({ id, icon, color, text }) => {
   return (
     <div
       id={id}
-      className="mt-2 flex grow items-center rounded-lg bg-gray-700 px-4 py-2 shadow-lg sm:py-0 sm:text-xl lg:text-2xl"
+      className="mt-2 flex grow items-center rounded-lg bg-gray-700 px-4 py-2 shadow-lg hover:bg-gray-600 active:bg-gray-500 sm:py-0 sm:text-xl lg:text-2xl"
     >
       <div className="pr-4">
         <FontAwesomeIcon icon={icon} size="xl" style={{ color }} />

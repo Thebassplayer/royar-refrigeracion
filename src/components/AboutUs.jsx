@@ -4,7 +4,7 @@ const AboutUs = () => {
   return (
     <section className="m-4 flex h-max grow flex-col justify-between rounded-lg bg-gray-800 p-4 shadow-lg">
       <div>
-        <h1 className="text-center text-2xl font-bold text-white">
+        <h1 className="text-justify text-2xl font-bold text-white">
           ¿Quienes Somos?
         </h1>
         <p className="mt-4 text-gray-300">
