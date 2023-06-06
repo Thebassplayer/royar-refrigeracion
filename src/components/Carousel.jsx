@@ -14,10 +14,10 @@ const Carousel = ({ images }) => {
   };
 
   useEffect(() => {
-    // Auto slide every 3 seconds
+    // Auto slide every 5 seconds
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000);
+    }, 5000);
 
     // Clean up the interval on component unmount
     return () => clearInterval(interval);
@@ -25,7 +25,7 @@ const Carousel = ({ images }) => {
 
   return (
     <section className="h-2/6 sm:h-2/5 md:h-1/2">
-      <div id="carousel" className="relative h-full overflow-hidden ">
+      <div id="carousel" className="h-full overflow-hidden ">
         <div className="flex h-full items-center justify-center">
           <img
             className="object-cover md:h-auto md:w-full"

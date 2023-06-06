@@ -40,19 +40,19 @@ const Services = () => {
 
   return (
     <section
-      className="m-3 flex h-max grow flex-col rounded-lg bg-gray-800 px-4 py-2 shadow-lg"
+      className="m-3 flex h-max grow flex-col rounded-lg bg-gray-800 p-4 shadow-lg"
       role="About us"
     >
       {
         // Sub-title
       }
-      <h2 className="py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:text-3xl xl:px-48">
+      <h2 className="py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:mb-4 lg:text-4xl xl:px-48">
         Servicio técnico en Aires Acondicionados
       </h2>
       {
         // Buttons container
       }
-      <div className="flex grow flex-col justify-evenly">
+      <div className="flex grow flex-col justify-evenly gap-4 lg:grid lg:grid-cols-4">
         {servicesButtons.map(({ id, icon, color, text }) => (
           <ServicesButton key={id} icon={icon} color={color} text={text} />
         ))}
