@@ -17,12 +17,18 @@ const Services = ({ setIscleaningVideo }) => {
       icon: faSnowflake,
       color: "#d6d6d6",
       text: "Especializados en equipos Split y Piso-Techo.",
+      onClick: () => {
+        setIscleaningVideo(false);
+      },
     },
     {
       id: 2,
       icon: faScrewdriverWrench,
       color: "#0dc5de",
       text: "Reparación e instalación.",
+      onClick: () => {
+        setIscleaningVideo(false);
+      },
     },
     {
       id: 3,
@@ -31,7 +37,6 @@ const Services = ({ setIscleaningVideo }) => {
       text: "Lavamos tu aire acondicionado.",
       onClick: () => {
         setIscleaningVideo(true);
-        console.log("click");
       },
     },
     {
@@ -39,6 +44,9 @@ const Services = ({ setIscleaningVideo }) => {
       icon: faLocationDot,
       color: "#ff0000",
       text: "Nuñez, Belgrano, Villa Urquiza, Saavedra, Coghlan, Colegiales, Vicente Lopez, San Isidro",
+      onClick: () => {
+        setIscleaningVideo(false);
+      },
     },
   ];
 
