@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import FullscreenContainer from "./components/FullscreenContainer";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
@@ -14,6 +14,9 @@ import image3 from "./assets/image3.jpeg";
 import image4 from "./assets/image4.png";
 
 const App = () => {
+  const [isCleaningVideo, setIscleaningVideo] = useState(false);
+  console.log(isCleaningVideo);
+
   //Provisorie carousel items
   const carouselItems = [
     { id: 1, src: image1 },
@@ -26,8 +29,8 @@ const App = () => {
     <div className="bg-slate-700">
       <FullscreenContainer>
         <Header />
-        <Carousel images={carouselItems} />
-        <Services />
+        <Carousel isCleaningVideo={isCleaningVideo} images={carouselItems} />
+        <Services setIscleaningVideo={setIscleaningVideo} />
       </FullscreenContainer>
       <AboutUs />
       <Contact />

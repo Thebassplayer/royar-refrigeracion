@@ -10,7 +10,7 @@ import {
   faSnowflake,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Services = () => {
+const Services = ({ setIscleaningVideo }) => {
   const servicesButtons = [
     {
       id: 1,
@@ -29,6 +29,10 @@ const Services = () => {
       icon: faShower,
       color: "#35f500",
       text: "Lavamos tu aire acondicionado.",
+      onClick: () => {
+        setIscleaningVideo(true);
+        console.log("click");
+      },
     },
     {
       id: 4,
@@ -40,7 +44,7 @@ const Services = () => {
 
   return (
     <section
-      className="m-2 flex h-max grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg"
+      className="m-2 flex h-max grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg md:p-4 lg:m-4"
       role="About us"
     >
       {
@@ -53,8 +57,14 @@ const Services = () => {
         // Buttons container
       }
       <div className="flex grow flex-col justify-evenly gap-4 md:grid md:grid-cols-2 lg:grid-cols-4">
-        {servicesButtons.map(({ id, icon, color, text }) => (
-          <ServicesButton key={id} icon={icon} color={color} text={text} />
+        {servicesButtons.map(({ id, icon, color, text, onClick }) => (
+          <ServicesButton
+            onClick={onClick}
+            key={id}
+            icon={icon}
+            color={color}
+            text={text}
+          />
         ))}
       </div>
     </section>
