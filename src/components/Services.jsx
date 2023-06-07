@@ -47,31 +47,33 @@ const Services = ({ setIscleaningVideo }) => {
       onClick: () => {
         setIscleaningVideo(false);
       },
+      link: "https://www.google.com.ar/maps/place/Refrigeraci%C3%B3n+Royal/@-34.5629894,-58.4906778,14.42z/data=!4m6!3m5!1s0x95bcb19cd53d9109:0x47a2ecdc0b99101c!8m2!3d-34.5701134!4d-58.4843619!16s%2Fg%2F11j7j149p2?hl=en&entry=ttu",
     },
   ];
 
   return (
     <section
-      className="m-2 flex h-max grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg md:p-4 lg:m-4"
+      className="m-2 flex h-max grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg md:p-4 lg:m-6 lg:p-8"
       role="About us"
     >
       {
         // Sub-title
       }
-      <h2 className="mb-1 py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:mb-4 lg:text-4xl xl:px-48">
+      <h2 className="mb-1 py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:my-6 lg:text-4xl xl:px-48">
         Servicio técnico en Aires Acondicionados
       </h2>
       {
         // Buttons container
       }
       <div className="flex grow flex-col justify-evenly gap-4 md:grid md:grid-cols-2 lg:grid-cols-4">
-        {servicesButtons.map(({ id, icon, color, text, onClick }) => (
+        {servicesButtons.map(({ id, icon, color, text, onClick, link }) => (
           <ServicesButton
             onClick={onClick}
             key={id}
             icon={icon}
             color={color}
             text={text}
+            link={link}
           />
         ))}
       </div>
