@@ -59,8 +59,8 @@ const Services = ({ setIscleaningVideo }) => {
       {
         // Sub-title
       }
-      <h2 className="mb-1 py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:my-6 lg:text-4xl xl:px-48">
-        Servicio técnico en Aires Acondicionados
+      <h2 className="mb-1 py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:mb-8 lg:text-4xl xl:px-48">
+        Servicio técnico de Aires Acondicionados
       </h2>
       {
         // Buttons container

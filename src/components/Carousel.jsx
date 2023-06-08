@@ -21,7 +21,7 @@ const Carousel = ({ images, isCleaningVideo }) => {
   }, [images.length]);
 
   return (
-    <section className="h-2/6 sm:h-2/5 md:h-2/5">
+    <section className="h-2/6 sm:h-2/5 md:h-2/5 lg:h-1/2">
       {isCleaningVideo ? (
         <div id="carousel" className="flex h-full overflow-hidden">
           <CleaningVideo videoId="-xcsCyxIXis" />
@@ -40,7 +40,7 @@ const Carousel = ({ images, isCleaningVideo }) => {
               {images.map((image, index) => (
                 <img
                   key={index}
-                  className={`w-full object-cover ${
+                  className={`w-full object-cover brightness-50 ${
                     index === currentIndex ? "block" : "hidden"
                   }`}
                   src={image.src}

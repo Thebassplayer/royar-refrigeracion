@@ -1,9 +1,10 @@
 import React from "react";
+import SectionsContainer from "./SectionsContainer";
 
 const AboutUs = () => {
   return (
-    <section className="m-2 flex h-max grow flex-col justify-between rounded-lg bg-gray-800 p-4 shadow-lg lg:m-6">
-      <div>
+    <SectionsContainer>
+      <section id="aboutUs">
         <h2 className="py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:text-3xl xl:px-48">
           ¿Quienes Somos?
         </h2>
@@ -13,8 +14,8 @@ const AboutUs = () => {
           Buenos Aires, Argentina. Contamos con más de 10 años de experiencia. 1
           año de garantia en todos nuestros trabajos.
         </p>
-      </div>
-    </section>
+      </section>
+    </SectionsContainer>
   );
 };
 

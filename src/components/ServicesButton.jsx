@@ -24,7 +24,7 @@ const ServicesButton = ({ id, icon, color, text, onClick, link }) => {
       <div className="flex h-full items-center justify-center pr-4 md:hidden">
         <FontAwesomeIcon icon={icon} size="xl" style={{ color }} />
       </div>
-      <div className="hidden justify-center md:flex md:h-2/3 md:flex-col lg:mb-4 lg:h-1/2">
+      <div className="hidden justify-end md:flex md:h-2/3 md:flex-col lg:mb-4 lg:h-1/2">
         <FontAwesomeIcon icon={icon} size="2xl" style={{ color }} />
       </div>
       <h3 className="grow text-sm text-gray-200 md:text-center lg:h-1/3 lg:text-base xl:text-lg">

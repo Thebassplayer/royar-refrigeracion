@@ -19,7 +19,6 @@ import image8 from "./assets/image8.jpg";
 
 const App = () => {
   const [isCleaningVideo, setIscleaningVideo] = useState(false);
-  console.log(isCleaningVideo);
 
   //Provisorie carousel items
   const carouselItems = [
