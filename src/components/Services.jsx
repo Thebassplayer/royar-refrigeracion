@@ -52,6 +52,10 @@ const Services = ({ setIscleaningVideo }) => {
     },
   ];
 
+  const motionDelayFunction = index => {
+    return index * 0.1;
+  };
+
   return (
     <section
       className="m-2 flex grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg md:p-4 lg:m-6 lg:p-8"
@@ -75,6 +79,7 @@ const Services = ({ setIscleaningVideo }) => {
             color={color}
             text={text}
             link={link}
+            motionDelay={motionDelayFunction(id)}
           />
         ))}
       </div>

@@ -15,7 +15,7 @@ const Contact = () => {
           la brevedad
         </p>
 
-        <div className="mx-auto mt-4 w-min">
+        <div className="mx-auto mt-4 w-min lg:mt-8">
           <WhatsAppButton />
         </div>
       </section>
