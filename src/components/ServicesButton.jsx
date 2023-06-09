@@ -15,8 +15,8 @@ const ServicesButton = ({
   link,
   motionDelay,
 }) => {
-  const openLinkInNewTab = link => {
-    window.open(link);
+  const openLinkInSameTab = link => {
+    window.location.href = link;
   };
 
   const onClickHandler = () => {
@@ -24,7 +24,7 @@ const ServicesButton = ({
       onClick();
     }
     if (link) {
-      openLinkInNewTab(link);
+      openLinkInSameTab(link);
     }
   };
 
