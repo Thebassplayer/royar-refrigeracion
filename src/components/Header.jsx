@@ -13,7 +13,7 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{
             duration: 0.8,
-            delay: 0.4,
+            delay: 0.6,
           }}
         >
           <span className="mr-3">❄️</span>
