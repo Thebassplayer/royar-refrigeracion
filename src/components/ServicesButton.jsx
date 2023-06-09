@@ -35,7 +35,7 @@ const ServicesButton = ({
       onClick={onClickHandler}
     >
       <motion.div
-        className="grow"
+        className="flex grow"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{

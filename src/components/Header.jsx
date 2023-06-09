@@ -13,8 +13,7 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{
             duration: 0.8,
-            delay: 0.2,
-            type: "spring",
+            delay: 0.4,
           }}
         >
           <span className="mr-3">❄️</span>
@@ -25,7 +24,7 @@ const Header = () => {
           animate={{ opacity: 1 }}
           transition={{
             duration: 0.8,
-            delay: 0.5,
+            delay: 0.2,
             type: "spring",
           }}
         >
