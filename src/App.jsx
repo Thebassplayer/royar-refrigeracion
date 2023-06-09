@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FullscreenContainer from "./components/FullscreenContainer";
 import Header from "./components/Header";
+import MainSectionContainer from "./components/MainSectionContainer";
 import Carousel from "./components/Carousel";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";

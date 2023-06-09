@@ -23,7 +23,7 @@ const Carousel = ({ images, isCleaningVideo }) => {
   return (
     <section className="h-2/6 sm:h-2/5 md:h-2/5 lg:h-1/2">
       {isCleaningVideo ? (
-        <div id="carousel" className="flex h-full overflow-hidden">
+        <div id="cleaning-video" className="flex h-full overflow-hidden">
           <CleaningVideo videoId="-xcsCyxIXis" />
         </div>
       ) : (
@@ -31,7 +31,7 @@ const Carousel = ({ images, isCleaningVideo }) => {
           <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={currentIndex}
-              className="flex w-full items-center justify-center"
+              className="flex w-full items-center justify-center overflow-hidden"
               initial={{ opacity: 1, x: "-100%" }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}

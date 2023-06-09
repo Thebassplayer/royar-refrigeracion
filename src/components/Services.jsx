@@ -54,7 +54,7 @@ const Services = ({ setIscleaningVideo }) => {
 
   return (
     <section
-      className="m-2 flex h-max grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg md:p-4 lg:m-6 lg:p-8"
+      className="m-2 flex grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg md:p-4 lg:m-6 lg:p-8"
       role="Services"
     >
       {
