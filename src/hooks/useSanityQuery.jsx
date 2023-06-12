@@ -34,6 +34,7 @@ const useSanityQuery = () => {
           const result = await client.fetch(query);
 
           const imageUrls = orderInfo(result);
+
           setImages(imageUrls);
         }
       } catch (error) {

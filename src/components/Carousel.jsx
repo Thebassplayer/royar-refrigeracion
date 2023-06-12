@@ -5,6 +5,7 @@ import useSanityQuery from "../hooks/useSanityQuery";
 import useScreenResolution from "../hooks/useScreenResolution";
 
 // Components
+import Spinner from "./Spinner";
 import CleaningVideo from "./CleaningVideo";
 
 // Framer Motion
@@ -64,15 +65,27 @@ const Carousel = ({ isCleaningVideo, images, resolution }) => {
 };
 
 const CarouselContainer = ({ isCleaningVideo }) => {
-  const { isLoading, isError, images } = useSanityQuery();
   const resolution = useScreenResolution();
 
+  const { isLoading, isError, images } = useSanityQuery();
+
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <section className="h-2/6 sm:h-2/5 md:h-2/5 lg:h-1/2">
+        <Spinner />
+      </section>
+    );
   }
 
   if (isError) {
-    return <div>Error fetching data</div>;
+    return (
+      <section className="h-2/6 sm:h-2/5 md:h-2/5 lg:h-1/2">
+        <div className="flex h-full items-center justify-center">
+          <h1>Error fetching data</h1>
+        </div>
+        ;
+      </section>
+    );
   }
 
   return (
