@@ -10,7 +10,7 @@ const Contact = () => {
         <h2 className="py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:text-3xl xl:px-48">
           ¿Consultas?
         </h2>
-        <p className="mt-4 text-center text-gray-300">
+        <p className="mt-4 px-4 text-center text-gray-300">
           Realizanos tu consulta directamente por Whatsapp. Te responderemos a
           la brevedad
         </p>
