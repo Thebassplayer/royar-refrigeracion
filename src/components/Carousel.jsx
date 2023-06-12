@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 
+// Custom hooks
+import useSanityQuery from "../hooks/useSanityQuery";
+import useScreenResolution from "../hooks/useScreenResolution";
+
+// Components
 import CleaningVideo from "./CleaningVideo";
 
+// Framer Motion
 import { motion, AnimatePresence } from "framer-motion";
 
-const Carousel = ({ images, isCleaningVideo }) => {
+const Carousel = ({ isCleaningVideo, images, resolution }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -37,16 +43,19 @@ const Carousel = ({ images, isCleaningVideo }) => {
               exit={{ opacity: 0, x: "100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {images.map((image, index) => (
-                <img
-                  key={index}
-                  className={`w-full object-cover brightness-50 ${
-                    index === currentIndex ? "block" : "hidden"
-                  }`}
-                  src={image.src}
-                  alt={`Slide ${index + 1}`}
-                />
-              ))}
+              {images.map((image, index) => {
+                console.log("Resolution:", image.imagesUrl[resolution]);
+                return (
+                  <img
+                    key={index}
+                    className={`w-full object-cover brightness-50 ${
+                      index === currentIndex ? "block" : "hidden"
+                    }`}
+                    src={image.imagesUrl[resolution]}
+                    alt={`Slide ${index + 1}`}
+                  />
+                );
+              })}
             </motion.div>
           </AnimatePresence>
         </div>
@@ -55,4 +64,25 @@ const Carousel = ({ images, isCleaningVideo }) => {
   );
 };
 
-export default Carousel;
+const CarouselContainer = ({ isCleaningVideo }) => {
+  const { isLoading, isError, images } = useSanityQuery();
+  const resolution = useScreenResolution();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error fetching data</div>;
+  }
+
+  return (
+    <Carousel
+      isCleaningVideo={isCleaningVideo}
+      images={images}
+      resolution={resolution}
+    />
+  );
+};
+
+export default CarouselContainer;
