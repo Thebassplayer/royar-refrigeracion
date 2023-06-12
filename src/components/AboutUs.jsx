@@ -9,10 +9,10 @@ const AboutUs = () => {
           ¿Quienes Somos?
         </h2>
         <p className="mt-4 px-4 text-justify text-gray-300">
-          "Somos una empresa especializada en reparación e instalación de aires
+          Somos una empresa especializada en reparación e instalación de aires
           acondicionados domiciliarios y comerciales en el norte de CABA y Gran
-          Buenos Aires, Argentina. Contamos con más de 10 años de experiencia. 1
-          año de garantia en todos nuestros trabajos.
+          Buenos Aires, Argentina. Contamos con más de 10 años de experiencia.
+          Ofrecemos 1 año de garantia escrita en todos nuestros trabajos.
         </p>
       </section>
     </SectionsContainer>
