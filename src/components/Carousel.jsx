@@ -44,7 +44,6 @@ const Carousel = ({ isCleaningVideo, images, resolution }) => {
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
               {images.map((image, index) => {
-                console.log("Resolution:", image.imagesUrl[resolution]);
                 return (
                   <img
                     key={index}
