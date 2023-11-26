@@ -12,7 +12,7 @@ const App = () => {
   const [isCleaningVideo, setIscleaningVideo] = useState(false);
 
   return (
-    <div className="bg-slate-700">
+    <div className="flex flex-col gap-4 bg-slate-700">
       <FullscreenContainer>
         <Header />
         <Carousel isCleaningVideo={isCleaningVideo} />
