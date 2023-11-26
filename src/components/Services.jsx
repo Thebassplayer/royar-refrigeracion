@@ -45,7 +45,7 @@ const Services = ({ setIscleaningVideo }) => {
       id: 4,
       icon: faLocationDot,
       color: "#ff0000",
-      text: "Nuñez, Belgrano, Villa Urquiza, Saavedra, Coghlan, Colegiales, Vicente Lopez, San Isidro",
+      text: "Villa Urquiza, Villa Pueyrredon, Saavedra, Coghlan, Belgrano, Parque Chas, Villa Ortuzar",
       onClick: () => {
         setIscleaningVideo(false);
       },
