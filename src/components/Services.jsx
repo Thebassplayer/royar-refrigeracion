@@ -59,13 +59,13 @@ const Services = ({ setIscleaningVideo }) => {
 
   return (
     <section
-      className="m-2 flex grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg md:p-4 lg:m-6 lg:p-8"
+      className="m-2 flex grow flex-col rounded-lg bg-gray-800 p-4 shadow-lg md:p-4 lg:m-6 lg:p-8"
       role="Services"
     >
       {
         // Sub-title
       }
-      <h2 className="mb-1 py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:mb-8 lg:text-4xl xl:px-48">
+      <h2 className="mb-4 py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:mb-8 lg:text-4xl xl:px-48">
         Servicio técnico de Aires Acondicionados
       </h2>
       {
