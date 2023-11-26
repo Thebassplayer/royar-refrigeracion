@@ -17,16 +17,17 @@ const Services = ({ setIscleaningVideo }) => {
       id: 1,
       icon: faSnowflake,
       color: "#d6d6d6",
-      text: "Especializados en equipos Split y Piso-Techo.",
+      text: "Tecnico Matriculado CACAAV",
       onClick: () => {
         setIscleaningVideo(false);
       },
+      link: "https://www.cacaav.com.ar/Informacion-al-usuario",
     },
     {
       id: 2,
       icon: faScrewdriverWrench,
       color: "#0dc5de",
-      text: "Reparación e instalación.",
+      text: "Reparación e instalación de equipos Split y Piso-Techo.",
       onClick: () => {
         setIscleaningVideo(false);
       },
@@ -73,7 +74,7 @@ const Services = ({ setIscleaningVideo }) => {
       <div className="flex grow flex-col justify-evenly gap-4 md:grid md:grid-cols-2 lg:grid-cols-4">
         {servicesButtons.map(({ id, icon, color, text, onClick, link }) => (
           <ServicesButton
-            onClick={onClick}
+            onClick={onClick ? onClick : null}
             key={id}
             icon={icon}
             color={color}
