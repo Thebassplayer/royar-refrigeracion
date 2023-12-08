@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useScreenResolution = () => {
-  const [resolution, setResolution] = useState(null);
+  const [resolution, setResolution] = useState<number | undefined>(null);
 
   useEffect(() => {
     const handleResize = () => {

@@ -6,6 +6,16 @@ import { motion } from "framer-motion";
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+type ServicesButtonProps = {
+  id: number;
+  icon: any;
+  color: string;
+  text: string;
+  onClick?: () => void;
+  link?: string;
+  motionDelay: number;
+};
+
 const ServicesButton = ({
   id,
   icon,
@@ -14,9 +24,11 @@ const ServicesButton = ({
   onClick,
   link,
   motionDelay,
-}) => {
-  const openLinkInSameTab = link => {
-    window.location.href = link;
+}: ServicesButtonProps): JSX.Element => {
+  const openLinkInSameTab = (link: string | undefined) => {
+    if (link) {
+      window.location.href = link;
+    }
   };
 
   const onClickHandler = () => {
@@ -30,7 +42,7 @@ const ServicesButton = ({
 
   return (
     <div
-      id={id}
+      id={id.toString()}
       className="flex h-full cursor-pointer  rounded-lg bg-gray-700 px-4 py-2 shadow-lg hover:bg-gray-600 active:bg-gray-500 sm:py-0 sm:text-xl md:flex-col lg:text-2xl"
       onClick={onClickHandler}
     >

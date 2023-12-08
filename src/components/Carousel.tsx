@@ -1,17 +1,22 @@
-import React, { useState, useEffect } from "react";
-
-// Custom hooks
-import useSanityQuery from "../hooks/useSanityQuery";
-import useScreenResolution from "../hooks/useScreenResolution";
-
-// Components
-import Spinner from "./Spinner";
+import { useState, useEffect } from "react";
 import CleaningVideo from "./CleaningVideo";
-
-// Framer Motion
 import { motion, AnimatePresence } from "framer-motion";
+import {
+  FormattedCarouselImage,
+  ImageKeys,
+} from "../utils/formatCarouselImages";
 
-const Carousel = ({ isCleaningVideo, images, resolution }) => {
+type CarouselProps = {
+  isCleaningVideo: boolean;
+  images: FormattedCarouselImage[];
+  resolution?: number | null;
+};
+
+const Carousel = ({
+  isCleaningVideo,
+  images = [],
+  resolution = 640,
+}: CarouselProps): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -51,50 +56,18 @@ const Carousel = ({ isCleaningVideo, images, resolution }) => {
                     className={`w-full object-cover brightness-50 ${
                       index === currentIndex ? "block" : "hidden"
                     }`}
-                    src={image.imagesUrl[resolution]}
+                    src={image.imagesUrl[resolution as ImageKeys]}
                     alt={`Slide ${index + 1}`}
                   />
                 );
               })}
             </motion.div>
           </AnimatePresence>
+          s
         </div>
       )}
     </section>
   );
 };
 
-const CarouselContainer = ({ isCleaningVideo }) => {
-  const resolution = useScreenResolution();
-
-  const { isLoading, isError, images } = useSanityQuery();
-
-  if (isLoading) {
-    return (
-      <section className="h-2/6 sm:h-2/5 md:h-2/5 lg:h-1/2">
-        <Spinner />
-      </section>
-    );
-  }
-
-  if (isError) {
-    return (
-      <section className="h-2/6 sm:h-2/5 md:h-2/5 lg:h-1/2">
-        <div className="flex h-full items-center justify-center">
-          <h1>Error fetching data</h1>
-        </div>
-        ;
-      </section>
-    );
-  }
-
-  return (
-    <Carousel
-      isCleaningVideo={isCleaningVideo}
-      images={images}
-      resolution={resolution}
-    />
-  );
-};
-
-export default CarouselContainer;
+export default Carousel;

@@ -3,7 +3,7 @@ import SectionsContainer from "./SectionsContainer";
 
 import WhatsAppButton from "./WhatsAppButton";
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
   return (
     <SectionsContainer>
       <section>

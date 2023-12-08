@@ -1,6 +1,8 @@
-import React from "react";
+type CleaningVideoProps = {
+  videoId: string;
+};
 
-const CleaningVideo = ({ videoId }) => {
+const CleaningVideo = ({ videoId }: CleaningVideoProps) => {
   const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1`;
 
   return (

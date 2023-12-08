@@ -3,7 +3,7 @@ import React from "react";
 // Framer Motion
 import { motion } from "framer-motion";
 
-const Header = () => {
+const Header = (): JSX.Element => {
   return (
     <section id="header">
       <div className="px-4 py-6 text-center text-3xl font-extrabold leading-none tracking-tight text-white dark:text-white sm:text-5xl md:py-8 md:text-5xl lg:py-4 lg:text-left lg:text-4xl">

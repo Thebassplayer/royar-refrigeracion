@@ -1,23 +1,13 @@
 import { useState, useEffect } from "react";
 import { client } from "../client";
-
-const orderInfo = info => {
-  return info.map(item => {
-    const { title, imageUrl } = item;
-    const imagesUrl = {
-      640: imageUrl[0],
-      768: imageUrl[1],
-      1024: imageUrl[2],
-      1280: imageUrl[3],
-    };
-    return { title, imagesUrl };
-  });
-};
+import formatCarouselImages, {
+  FormattedCarouselImage,
+} from "../utils/formatCarouselImages";
 
 const useSanityQuery = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [isError, setIsError] = useState(false);
-  const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState<Boolean>(true);
+  const [isError, setIsError] = useState<Boolean>(false);
+  const [images, setImages] = useState<FormattedCarouselImage[] | []>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,8 +22,9 @@ const useSanityQuery = () => {
             "imageUrl": images[].imageFile.asset->url
           }`;
           const result = await client.fetch(query);
+          console.log("fired");
 
-          const imageUrls = orderInfo(result);
+          const imageUrls = formatCarouselImages(result);
 
           setImages(imageUrls);
         }
