@@ -1,9 +1,8 @@
 import React from "react";
-import SectionsContainer from "./SectionsContainer";
 import ServicesButton from "./ServicesButton";
+import { IconDefinition } from "@fortawesome/fontawesome-common-types";
 
 // Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
   faScrewdriverWrench,
@@ -11,8 +10,21 @@ import {
   faSnowflake,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Services = ({ setIscleaningVideo }) => {
-  const servicesButtons = [
+type ServiceButtonType = {
+  id: number;
+  icon: IconDefinition;
+  color: string;
+  text: string;
+  onClick?: () => void;
+  link?: string;
+};
+
+type ServicesProps = {
+  setIscleaningVideo: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Services = ({ setIscleaningVideo }: ServicesProps) => {
+  const servicesButtons: ServiceButtonType[] = [
     {
       id: 1,
       icon: faSnowflake,
@@ -53,29 +65,26 @@ const Services = ({ setIscleaningVideo }) => {
     },
   ];
 
-  const motionDelayFunction = index => {
+  const motionDelayFunction = (index: number): number => {
     return index * 0.1;
   };
 
   return (
     <section
-      className="m-2 flex grow flex-col rounded-lg bg-gray-800 p-2 shadow-lg md:p-4 lg:m-6 lg:p-8"
+      className="m-2 flex grow flex-col rounded-lg bg-gray-800 p-4 shadow-lg md:p-4 lg:m-6 lg:p-8"
       role="Services"
     >
-      {
-        // Sub-title
-      }
-      <h2 className="mb-1 py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:mb-8 lg:text-4xl xl:px-48">
+      {/* Sub-title */}
+      <h2 className="mb-4 py-0 text-center text-2xl text-white sm:px-16 sm:text-3xl lg:mb-8 lg:text-4xl xl:px-48">
         Servicio técnico de Aires Acondicionados
       </h2>
-      {
-        // Buttons container
-      }
+      {/* Buttons container */}
       <div className="flex grow flex-col justify-evenly gap-4 md:grid md:grid-cols-2 lg:grid-cols-4">
         {servicesButtons.map(({ id, icon, color, text, onClick, link }) => (
           <ServicesButton
-            onClick={onClick ? onClick : null}
+            onClick={onClick ? () => onClick() : undefined}
             key={id}
+            id={id}
             icon={icon}
             color={color}
             text={text}

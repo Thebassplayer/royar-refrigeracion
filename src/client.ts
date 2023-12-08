@@ -18,4 +18,4 @@ export const client = createClient({
 // Sanity Image Builder
 export const builder = imageUrlBuilder(client);
 
-export const urlFor = source => builder.image(source);
+export const urlFor = (source: string) => builder.image(source);

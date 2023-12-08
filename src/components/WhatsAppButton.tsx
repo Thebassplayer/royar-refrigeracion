@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
-const WhatsAppButton = () => {
+const WhatsAppButton = (): JSX.Element => {
   return (
     <a
       href="https://wa.me/+5491171130958" // Replace with your WhatsApp number
