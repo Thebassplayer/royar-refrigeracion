@@ -5,32 +5,22 @@ import {
   FormattedCarouselImage,
   ImageKeys,
 } from "../utils/formatCarouselImages";
+import useCarousel from "../hooks/useCarousel";
 
 type CarouselProps = {
   isCleaningVideo: boolean;
-  images: FormattedCarouselImage[];
+  carouselImages: FormattedCarouselImage[];
   resolution?: number | null;
 };
 
 const Carousel = ({
   isCleaningVideo,
-  images = [],
-  resolution = 640,
+  carouselImages = [],
+  resolution,
 }: CarouselProps): JSX.Element => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    // Auto slide every 5 seconds
-    const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => {
-        const newIndex = prevIndex < images.length - 1 ? prevIndex + 1 : 0;
-        return newIndex;
-      });
-    }, 5000);
-
-    // Clear interval on component unmount
-    return () => clearInterval(interval);
-  }, [images.length]);
+  const { currentIndex } = useCarousel({
+    totalSlides: carouselImages.length,
+  });
 
   return (
     <section className="h-2/6 sm:h-2/5 md:h-2/5 lg:h-1/2">
@@ -49,7 +39,7 @@ const Carousel = ({
               exit={{ opacity: 0, x: "100%" }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {images.map((image, index) => {
+              {carouselImages.map((image, index) => {
                 return (
                   <img
                     key={index}
@@ -63,7 +53,6 @@ const Carousel = ({
               })}
             </motion.div>
           </AnimatePresence>
-          s
         </div>
       )}
     </section>
