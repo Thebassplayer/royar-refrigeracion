@@ -36,7 +36,7 @@ const CarouselContainer = ({
   return (
     <Carousel
       isCleaningVideo={isCleaningVideo}
-      images={images}
+      carouselImages={images}
       resolution={resolution}
     />
   );
