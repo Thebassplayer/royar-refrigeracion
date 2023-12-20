@@ -43,7 +43,7 @@ const Carousel = ({
                 return (
                   <img
                     key={index}
-                    className={`w-full object-cover brightness-50 ${
+                    className={`w-full object-cover brightness-90 ${
                       index === currentIndex ? "block" : "hidden"
                     }`}
                     src={image.imagesUrl[resolution as ImageKeys]}
