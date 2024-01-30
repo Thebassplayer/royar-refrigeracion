@@ -5,7 +5,9 @@ type FullscreenContainerProps = {
 const FullscreenContainer = ({
   children,
 }: FullscreenContainerProps): JSX.Element => {
-  return <div className="flex h-screen flex-col">{children}</div>;
+  return (
+    <div className="flex h-[100vh] flex-col sm:h-[100svh]">{children}</div>
+  );
 };
 
 export default FullscreenContainer;
