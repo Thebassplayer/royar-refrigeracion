@@ -47,7 +47,7 @@ const ServicesButton = ({
       onClick={onClickHandler}
     >
       <motion.div
-        className="flex h-full items-center justify-start md:flex-col lg:justify-center"
+        className="flex grow items-center justify-start md:flex-col lg:justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
@@ -62,7 +62,7 @@ const ServicesButton = ({
         <div className="hidden justify-end md:mb-4 md:flex md:h-1/2 md:flex-col lg:h-1/2">
           <FontAwesomeIcon icon={icon} size="2xl" style={{ color }} />
         </div>
-        <h3 className="grow text-sm text-gray-200 md:text-center lg:h-1/3 lg:text-sm xl:text-lg">
+        <h3 className="grow text-sm text-gray-200 md:text-center lg:h-1/3 lg:text-sm">
           {text}
         </h3>
       </motion.div>
